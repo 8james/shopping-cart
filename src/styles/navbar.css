@@ -1,0 +1,71 @@
+
+nav{
+    display: flex;
+    background-color: #1C49C2;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 0px 45px;
+    height: 10vh;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    z-index: 1;
+}
+.logo{
+    color: #ffffff;
+    font-family: 'Righteous', cursive;
+    font-size: 2.5rem;
+    letter-spacing: .25rem;
+}
+
+.logo:hover{
+    opacity: 70%;
+}
+
+nav >ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 16px;
+    font-size: 1.5rem;
+}
+.nav-btn:hover{
+    opacity: 70%;
+}
+.nav-left{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+img{
+    height: 2rem;
+}
+.nav-btn{
+    color: #ffffff;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.cart-badge{
+    background-color: yellow;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left:80%;
+}

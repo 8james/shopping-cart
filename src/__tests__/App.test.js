@@ -6,4 +6,6 @@ import App from '../App'
 test("App component redners", () => {
     render(<App/>)
     const appDiv = screen.getByTestId('appDiv');
+    expect(appDiv).toBeInTheDocument();
 })
+

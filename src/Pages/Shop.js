@@ -1,8 +1,9 @@
 import ShopData from '../ShopData'
 import ProductsCard from "../Components/ProductsCard";
+import '../styles/shop.css'
 
 const Shop = (props) => {
-
+    
   const displayItems = ShopData.map(item => {
       return(
           <ProductsCard
@@ -14,7 +15,6 @@ const Shop = (props) => {
           />
       )
   })
-
     return (
         <div className='shop' data-testid='shopdiv'>
             {displayItems}

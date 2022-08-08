@@ -4,10 +4,10 @@ import Nav from "./Components/Nav";
 import Home from "./Pages/Home";
 import Shop from "./Pages/Shop";
 import Cart from "./Components/Cart";
+import Footer from "./Components/Footer";
 import ProductPage from "./Pages/ProductPage";
 
 const App = () => {
-
   const [cart, setCart ] = useState([]);
   
   const addToCart = (item) => {
@@ -40,15 +40,15 @@ const App = () => {
   }
 
   const decrementQuantity = (item) => {
-    const currentCart = cart.filter(item => item.quantity >= 1);
-    const updatedQuantity = currentCart.map(obj => {
+    const updatedQuantity = cart.map(obj => {
       return obj.id === item.id ? {...obj, quantity: obj.quantity -=1} : obj
     })
-    setCart(updatedQuantity)
+    const updatedCart = updatedQuantity.filter(item => item.quantity >= 1);
+    setCart(updatedCart);
   }
   
     return(
-      <div data-testid="appDiv"> 
+      <div className="App" data-testid="appDiv"> 
         <BrowserRouter>
             <Nav cart={cart}/>
             <Routes>
@@ -57,6 +57,7 @@ const App = () => {
                 <Route path='/shop/:id' element={<ProductPage addToCart={addToCart}/>}/>
                 <Route path='/cart' element={<Cart cart={cart} updateQuantity={updateQuantity} incrementQuantity={incrementQuantity} decrementQuantity={decrementQuantity}/>}/>
             </Routes>
+            <Footer/>
         </BrowserRouter>
         </div>
     )

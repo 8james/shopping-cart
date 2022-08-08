@@ -1,0 +1,9 @@
+/*shop*/
+.shop{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 32px;
+    gap: 30px;
+
+}

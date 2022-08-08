@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import ShopData from "../ShopData";
+import '../styles/productpage.css'
 
 const ProductPage = (props) => {
     const { addToCart } = props
@@ -15,11 +16,15 @@ const ProductPage = (props) => {
     
     return(
         <div className="product-page">
-             <h1>Product Page</h1>
-            <img src={selectedItem.img} alt="product" className="product-page--image"/>
-            <h1>{selectedItem.name}</h1>
-            <h1>{selectedItem.price}</h1>
-            <button onClick={()=>addToCart(selectedItem)}>add to cart</button>
+            <div>
+                <img src={selectedItem.img} alt="product" className="product-page--image"/>
+            </div>
+            <div className="product-page--info">
+                <h1 className="product-page-title">{selectedItem.name}</h1>
+                <p className="product-page--price">${selectedItem.price}</p>
+                <p className="product-page-description">{selectedItem.description}</p>
+                <button onClick={()=>addToCart(selectedItem)} className="product-page--btn">add to cart</button>
+            </div>
         </div>
     )
 

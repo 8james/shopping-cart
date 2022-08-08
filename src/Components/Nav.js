@@ -1,20 +1,31 @@
 import { Link } from "react-router-dom"
+import '../styles/navbar.css'
+import cartIcon from '../assets/shopping_cart.svg'
+import bagIcon from '../assets/shopping_bag.svg'
 function Nav(props){
     const { cart } = props
     return(
         <nav>
             <Link to='/'>
-                <h1 className="logo">Logo</h1>
+                <h1 className="logo">Dog Shop</h1>
             </Link>
-            
-            <ul>
+            <div className="nav-left">
                 <Link to='/shop'>
-                    <li className="nav-btn">Shop</li>
+                    <div className="nav-btn">
+                        <p>Shop</p>
+                        <img src={bagIcon}/>
+                    </div>
                 </Link>
                 <Link to='/cart'>
-                    <li className="nav-btn">Cart {cart.length}</li>
+                    <div className="nav-btn">
+                        <p className="nav-btn">Cart</p>
+                        <img src={cartIcon}></img>
+                        <div className="cart-badge">
+                            {cart.length}
+                        </div>
+                    </div>
                 </Link>
-            </ul>
+            </div>
         </nav>
     )
 }
