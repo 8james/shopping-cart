@@ -42,7 +42,6 @@ const Cart = (props) => {
             <h1 className="cart--title">Your Shopping Cart</h1>
             {cart.length < 1 ? <p className="cart--empty">cart is empty</p> : 
             <div className="cart--full">{displayCart} <h3 data-testid='totalH3'>Total: ${total}</h3> <button>check out</button></div>}
-            
         </div>
     )
  };

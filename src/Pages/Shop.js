@@ -19,7 +19,6 @@ const Shop = (props) => {
         <div className='shop' data-testid='shopdiv'>
             {displayItems}
         </div>
-        
     )
 }
 export default Shop;

@@ -5,7 +5,6 @@ const Home = () => {
         <div className="home">
             <div className='img-container'> 
             </div>
-
         <div className='card-section'>
             <div>
                 <h1>Our Products</h1>
